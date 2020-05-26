@@ -21,4 +21,11 @@ TCP/IP通信信息流传输如下：
 
 GET方法用来请求访问服务器中指定的资源。指定的资源经服务器端解析后返回响应内容。如果请求的是文本则返回文本，如果是请求像CGI（Common Gateway Interface，通用网关接口）这样的程序就返回经过执行后的输出结果。
 
-使用GET方法的请求$\cdot$响应例子如下：
+使用GET方法的请求例子如下：
+
+```
+GET /index.html HTTP/1.1
+Host:www.hacker.jp
+```
+
+服务器会返回`index.htm`的页面资源
