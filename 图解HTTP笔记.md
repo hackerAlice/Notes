@@ -28,4 +28,43 @@ GET /index.html HTTP/1.1
 Host:www.hacker.jp
 ```
 
-服务器会返回`index.htm`的页面资源
+服务器会返回`index.htm`的页面资源。
+
+#### 2. POST方法
+
+POST方法用来传输实体的主体。使用POST方法的请求例子如下：
+
+```
+POST /submit.cgi HTTP/1.1
+Host:www.hacker.jp
+Content—Length:1560(1560字节的数据)
+```
+
+服务器会返回`submit.cgi`接收数据的处理结果.
+
+#### 3. PUT方法
+
+PUT方法是用来传输文件的。在请求报文的主体中包含文件的内容，然后保存在URI指定的位置。但是PUT方法没有验证机制，存在安全问题，因此一般的web网站不使用该方法。
+
+使用PUT方法的请求例子如下：
+
+```
+PUT /example.html HTTP/1.1
+Host:www.hacker.jp
+Content-Type:text/html
+Content-Length:1560
+```
+#### 4. HEAD方法
+
+HEAD方法和GET方法一样，只是不返回报文的主体部分，而是放回报文的首部。
+
+使用HEAD方法的请求例子如下：
+
+```
+HEAD /index.html HTTP/1.1
+Host:www.hacker.jp
+```
+服务器返回`index.html`有关的响应首部。
+
+#### 5. DELET方法
+
