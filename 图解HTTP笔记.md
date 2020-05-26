@@ -12,3 +12,13 @@ TCP/IP协议族按层次分可以分为4层：应用层、传输层、网络层�
 TCP/IP通信信息流传输如下：
 
 ![TCP/IP信息传输](./picture/3CQ(0ICKF3S3P}B2B)KRUYR.png)
+
+## HTTP协议中的方法
+
+在HTTP协议中有许多的方法：GET、POST、PUT、DELET、HEAD、OPTIONS、TRACE、CONNECT等。下面分别介绍他们：
+
+#### 1. GET方法
+
+GET方法用来请求访问服务器中指定的资源。指定的资源经服务器端解析后返回响应内容。如果请求的是文本则返回文本，如果是请求像CGI（Common Gateway Interface，通用网关接口）这样的程序就返回经过执行后的输出结果。
+
+使用GET方法的请求$\cdot$响应例子如下：
