@@ -68,3 +68,44 @@ Host:www.hacker.jp
 
 #### 5. DELET方法
 
+DELET方法是用来删除文件的，与PUT方法相反。DELET方法按请求URI删除指定的资源。和PUT方法类似，DELET方法也是不带安全验证的，所以一般的web网站也不提供该方法。
+
+使用DELET方法的请求例子如下：
+
+```
+DELET /example.html HTTP/1.1
+Host:www.hacker.jp
+```
+
+#### 6. OPTIONS方法
+
+OPTIONS方法用来查询针对请求URI指定的资源支持的方法。
+
+使用OPTIONS方法的请求例子如下：
+
+ ```
+ OPTIONS * HTTP/1.1
+ Host:www.hacker.jp
+ ```
+ 
+ 服务器返回支持的方法。
+ 
+ #### TRACE方法
+ 
+ TARCE方法追踪路径。TRACE方法是让web服务器端将之前的请求通信环回给客户端的方法。
+ 
+ #### CONNECT方法
+ 
+ CONNECT方法要求在与代理服务器通信时建立隧道，实现用隧道协议进行TCP通信。主要使用SSL（Secure Socket Layer，安全套接层）和TLS（Transport Layer Security，传输层安全）协议吧通信内容加密后经网络隧道传播。CONNECT方法的格式如下所示：
+ 
+ ```
+ CONNECT 代理服务器名：端口号 HTTP版本
+ ```
+ 
+ 使用CONNECT方法的请求例子如下：
+ 
+ ```
+ CONNECT proxy.hacker.jp:8080 HTTP/1.1
+ Host:proxy.hacker.jp
+ ```
+ 
