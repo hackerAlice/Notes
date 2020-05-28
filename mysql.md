@@ -8,3 +8,8 @@ MySQL的下载地址:[MySQL Shell](https://dev.mysql.com/downloads/shell/)，下
 
 ![access shell](./picture/access_mysql_shell.jpg)
 
+在上图中出现的shell中可以输入`\help`，输出帮助信息。
+
+使用`\connect root@127.0.0.1`，然后输入密码就可以连接到MySQL服务。如下图所示：
+
+![connect shell](./picture/connect_mysql.jpg)
