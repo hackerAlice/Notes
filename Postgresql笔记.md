@@ -29,4 +29,27 @@ postgres-# \help <command_name>
 | serial | 4字节 | 自增整数 | 1到2147483647 |
 | bigserial | 8字节 | 自增的大范围整数 | 1到92233720368547755807 |
 
+### 2. 字符类型
+
+| 序号 | 名字 | 描述 |
+| :--- | :--- | :--- |
+| 1 | character varying(n), varchar(n) | 变长，有长度限制 |
+| 2 | character(n), char(n) | 定长，不足补空白 |
+| 3 | text | 变长，无长度限制 |
+
+### 3. 布尔类型
+
+| 名称 | 存储格式 | 描述 |
+| :--- | :------ | :--- |
+| boolean | 1字节 | true/false |
+
+### 4. 枚举类型
+
+Posgresql中枚举类型类似于C语言中enum类型，枚举类型使用`CREATE TYPE`命令创建。
+
+创建一周中的几天，如下所示：
+
+```
+CREATE TYPE week AS ENUM ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun');
+```
 
